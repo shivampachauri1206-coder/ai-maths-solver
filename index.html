@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Maths Solver</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>🧮 AI Maths Solver</h1>
+
+        <p class="subtitle">
+            Solve maths problems step by step
+        </p>
+
+
+        <div class="solver-box">
+
+            <!-- Language Selection -->
+
+            <h3>Select Language</h3>
+
+            <select id="language">
+
+                <option value="English">
+                    English
+                </option>
+
+                <option value="Hindi">
+                    Hindi
+                </option>
+
+            </select>
+
+
+            <!-- Maths Question -->
+
+            <h3>Enter Your Maths Question</h3>
+
+            <textarea
+                id="question"
+                placeholder="Example: 2x + 5 = 15">
+            </textarea>
+
+
+            <!-- Buttons -->
+
+            <br>
+
+            <button id="solveBtn">
+                Solve Question
+            </button>
+
+
+            <button id="clearBtn">
+                🗑️ Clear
+            </button>
+
+
+            <button id="explainBtn">
+                💡 Explain More
+            </button>
+
+
+            <!-- Image Upload -->
+
+            <div class="upload">
+
+                <h3>📷 Upload Question</h3>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                >
+
+
+                <p>
+                    Upload a photo of your maths question
+                </p>
+
+
+                <!-- Image Preview -->
+
+                <img
+                    id="imagePreview"
+                    alt="Question Preview"
+                    style="
+                        display: none;
+                        max-width: 100%;
+                        margin-top: 15px;
+                        border-radius: 10px;
+                    "
+                >
+
+
+                <br>
+
+
+                <button id="ocrBtn">
+                    🔍 Read Question
+                </button>
+
+
+                <p id="ocrStatus"></p>
+
+            </div>
+
+
+            <!-- Solution -->
+
+            <div class="solution">
+
+                <h3>💡 Solution</h3>
+
+                <p id="solution">
+                    Your step-by-step solution will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Tesseract OCR -->
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+
+    <!-- Our JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
